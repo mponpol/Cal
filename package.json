@@ -1,0 +1,27 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "calendar with to-do app",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mponpol/Cal.git"
+  },
+  "keywords": [
+    "cal",
+    "calendar",
+    "to-do"
+  ],
+  "author": "Mario Ponce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mponpol/Cal/issues"
+  },
+  "homepage": "https://github.com/mponpol/Cal#readme",
+  "devDependencies": {
+    "sass": "^1.58.0"
+  }
+}

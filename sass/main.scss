@@ -1,3 +1,7 @@
+$primary-clr-1: #2b4865;
+$primary-clr-2: #256d85;
+$primary-clr-3: #8fe3cf;
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -22,7 +26,7 @@ body {
   color: #fff;
   display: flex;
   border-radius: 7px;
-  background-color: #2b4865;
+  background-color: $primary-clr-1;
 }
 
 .cal-header {
@@ -81,7 +85,7 @@ table th {
 }
 
 .grid-week .event::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -108,7 +112,5 @@ table th {
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
-  border: solid 1px #8fe3cf;
+  border: solid 1px $primary-clr-3;
 }
-
-/*# sourceMappingURL=style.css.map */
