@@ -1,116 +1,13 @@
-$primary-clr-1: #2b4865;
-$primary-clr-2: #256d85;
-$primary-clr-3: #8fe3cf;
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
 
-body {
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e2e1dc;
-}
+@import 'components/buttons';
 
-.cal-container {
-  position: relative;
-  width: 1200px;
-  min-height: 850px;
-  margin: 0 auto;
-  padding: 5px;
-  color: #fff;
-  display: flex;
-  border-radius: 7px;
-  background-color: $primary-clr-1;
-}
+@import 'layout/header';
 
-.cal-header {
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  display: flex;
-}
-
-.cal-header-date {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.month-grid {
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 100vh;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-}
-
-table {
-  width: 100%;
-}
-
-table th {
-  width: 300px;
-}
-
-.grid-week .active {
-  font-size: 2rem;
-  background-color: greenyellow;
-}
-
-.grid-day:not(.prev-date, .next-date) {
-  color: red;
-}
-
-.grid-week .today {
-  font-size: 2rem;
-  color: yellow;
-}
-
-.grid-week .event {
-  position: relative;
-}
-
-.grid-week .event::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  width: 75%;
-  height: 6px;
-  border-radius: 30px;
-  transform: translateX(-50%);
-  background-color: aqua;
-}
-
-.cal-header .goto-today {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  padding: 0 20px;
-  right: 10px;
-}
-
-.cal-header .goto-today .goto {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  overflow: hidden;
-  border: solid 1px $primary-clr-3;
-}
+@import 'pages/home';
