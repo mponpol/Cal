@@ -45,7 +45,7 @@ function initCalendar() {
   let week = 1;
   let daysCounter = 0;
 
-  daysContainer.innerHTML += `<tr class="grid-week grid-week-${week}">
+  daysContainer.innerHTML += `<tr class="grid-week grid-week-${week}" role="rowgroup">
                               </tr>`;
 
   // Days of previous month (if necessary)
@@ -92,7 +92,7 @@ function initCalendar() {
       daysCounter = 0;
       i--;
       week++;
-      daysContainer.innerHTML += `<tr class="grid-week grid-week-${week}">
+      daysContainer.innerHTML += `<tr class="grid-week grid-week-${week}" role="rowgroup">
                                   </tr>`;
     }
   }

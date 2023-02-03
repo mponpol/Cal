@@ -11,12 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  // min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e2e1dc;
+  background-color: $grey-light-1;
 
   box-sizing: border-box;
 }

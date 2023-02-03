@@ -1,97 +1,174 @@
 .cal-container {
   position: relative;
-  width: 1200px;
-  min-height: 850px;
-  margin: 0 auto;
-  padding: 5px;
-  color: #fff;
+  margin: 3rem auto;
+  width: 80vw;
+  height: 90vh;
+  padding: 1rem;
   display: flex;
-  border-radius: 7px;
-  background-color: $primary-clr-1;
-}
-
-.cal-header {
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  display: flex;
-}
-
-.cal-header-date {
-  position: absolute;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  left: 50%;
-  transform: translateX(-50%);
+  color: $black;
+  background-color: $grey-light-2;
+  border-top: solid 0.5rem orange;
+
+  .cal-header {
+    height: 10%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cal-header-btn-group {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .cal-header-date {
+      font-size: 2.5rem;
+    }
+
+    .goto-today {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border: solid 0.13rem $grey-dark-2;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .month-grid {
+    height: 90%;
+    color: $primary-clr-1;
+    // display: table;
+
+    thead {
+      display: table-header-group;
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+
+    tbody {
+      display: table-row-group;
+
+      .grid-day-frame {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .grid-day-header {
+          position: absolute;
+          right: 0.5rem;
+          top: 0.2rem;
+          font-size: 1.3rem;
+        }
+        .grid-day-body {
+          position: absolute;
+          height: 80%;
+        }
+      }
+
+      .prev-date,
+      .next-date {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
-.month-grid {
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 100vh;
-}
+// .cal-header {
+//   position: absolute;
+//   width: 100%;
+//   height: 150px;
+//   display: flex;
+// }
 
-.prev,
-.next {
-  cursor: pointer;
-}
+// .cal-header-date {
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+//   font-size: 1.2rem;
+//   text-transform: capitalize;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
 
-table {
-  width: 100%;
-}
+// .month-grid {
+//   position: absolute;
+//   top: 100px;
+//   width: 100%;
+//   height: 100vh;
+// }
 
-table th {
-  width: 300px;
-}
+// .prev,
+// .next {
+//   cursor: pointer;
+// }
 
-.grid-week .active {
-  font-size: 2rem;
-  background-color: greenyellow;
-}
+// table {
+//   width: 100%;
+// }
 
-.grid-day:not(.prev-date, .next-date) {
-  color: red;
-}
+// table th {
+//   width: 300px;
+// }
 
-.grid-week .today {
-  font-size: 2rem;
-  color: yellow;
-}
+// .grid-week .active {
+//   font-size: 2rem;
+//   background-color: greenyellow;
+// }
 
-.grid-week .event {
-  position: relative;
-}
+// .grid-day:not(.prev-date, .next-date) {
+//   color: red;
+// }
 
-.grid-week .event::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  width: 75%;
-  height: 6px;
-  border-radius: 30px;
-  transform: translateX(-50%);
-  background-color: aqua;
-}
+// .grid-week .today {
+//   font-size: 2rem;
+//   color: yellow;
+// }
 
-.cal-header .goto-today {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  padding: 0 20px;
-  right: 10px;
-}
+// .grid-week .event {
+//   position: relative;
+// }
 
-.cal-header .goto-today .goto {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  overflow: hidden;
-  border: solid 1px $primary-clr-3;
-}
+// .grid-week .event::after {
+//   content: '';
+//   position: absolute;
+//   bottom: 10px;
+//   left: 50%;
+//   width: 75%;
+//   height: 6px;
+//   border-radius: 30px;
+//   transform: translateX(-50%);
+//   background-color: aqua;
+// }
+
+// .cal-header .goto-today {
+//   width: 100%;
+//   height: 50px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: 5px;
+//   padding: 0 20px;
+//   right: 10px;
+// }
+
+// .cal-header .goto-today .goto {
+//   display: flex;
+//   align-items: center;
+//   border-radius: 5px;
+//   overflow: hidden;
+//   border: solid 1px $primary-clr-3;
+// }

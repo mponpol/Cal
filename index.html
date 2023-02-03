@@ -13,6 +13,13 @@
       referrerpolicy="no-referrer"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="script.js"></script>
 
@@ -35,28 +42,28 @@
         </div>
       </div>
 
-      <table class="month-grid">
-        <thead>
-          <tr class="weekdays">
-            <th>
+      <table class="month-grid" role="grid">
+        <thead role="rowgroup">
+          <tr class="weekdays" role="presentation">
+            <th role="columnheader">
               <a class="header-day">Sun</a>
             </th>
-            <th>
+            <th role="columnheader">
               <a class="header-day">Mon</a>
             </th>
-            <th>
+            <th role="columnheader">
               <a class="header-day">Tue</a>
             </th>
-            <th>
+            <th role="columnheader">
               <a class="header-day">Wed</a>
             </th>
-            <th>
+            <th role="columnheader">
               <a class="header-day">Thu</a>
             </th>
-            <th>
+            <th role="columnheader">
               <a class="header-day">Fri</a>
             </th>
-            <th>
+            <th role="columnheader">
               <a class="header-day">Sat</a>
             </th>
           </tr>
