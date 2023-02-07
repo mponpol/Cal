@@ -9,7 +9,7 @@
   justify-content: center;
   color: $black;
   background-color: $grey-light-2;
-  border-top: solid 0.5rem orange;
+  border-top: solid 0.5rem $primary-clr-2;
 
   .cal-header {
     height: 10%;
@@ -21,17 +21,92 @@
 
     .cal-header-btn-group {
       display: flex;
-      gap: 1.5rem;
-      font-size: 2rem;
+      gap: 0.5rem;
+      font-size: 1.8rem;
+
+      .fa {
+        display: flex;
+        color: $primary-clr-1;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50px;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+          transition: all 0.5s;
+          color: #fff;
+          background-color: $primary-clr-2;
+        }
+      }
     }
 
     .cal-header-date {
       font-size: 2.5rem;
+      font-weight: 400;
+      color: $primary-clr-1;
     }
 
     .goto-today {
       display: flex;
       gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      .goto {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border: solid 1px $primary-clr-1;
+
+        input {
+          position: relative;
+          width: 10rem;
+          height: 2.2rem;
+          left: 0.5rem;
+          outline: none;
+          border: none;
+
+          &::placeholder {
+            color: $primary-clr-1;
+            opacity: 0.6;
+          }
+        }
+        button {
+          position: absolute;
+          right: 0;
+          height: 2.2rem;
+          width: 2rem;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+            transition: all 0.5s;
+            color: $grey-light-2;
+            background-color: $primary-clr-2;
+          }
+        }
+      }
+
+      .today-btn {
+        height: 3rem;
+        padding: 0 1rem;
+        border: none;
+        background-color: transparent;
+        color: $primary-clr-1;
+        font-size: 1.8rem;
+
+        &:hover {
+          transition: all 0.5s;
+          color: #fff;
+          background-color: $primary-clr-2;
+          border-radius: 50px;
+        }
+      }
     }
   }
 
@@ -73,9 +148,17 @@
           top: 0.2rem;
           font-size: 1.3rem;
         }
+
         .grid-day-body {
           position: absolute;
           height: 80%;
+        }
+      }
+
+      .today {
+        .grid-day-header {
+          color: $primary-clr-2;
+          font-size: 2rem;
         }
       }
 

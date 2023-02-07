@@ -21,7 +21,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 
     <title>Calendar</title>
   </head>
@@ -36,7 +36,9 @@
         <div class="goto-today">
           <div class="goto">
             <input type="text" placeholder="mm/yyyy" class="date-input" />
-            <button class="goto-btn">go</button>
+            <button class="goto-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
           <button class="today-btn">today</button>
         </div>
@@ -75,5 +77,7 @@
       </table>
       <div class="cal-grid"></div>
     </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

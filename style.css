@@ -31,7 +31,7 @@ body {
   justify-content: center;
   color: #000;
   background-color: #f8f8f8;
-  border-top: solid 0.5rem orange;
+  border-top: solid 0.5rem #256d85;
 }
 .cal-container .cal-header {
   height: 10%;
@@ -43,15 +43,82 @@ body {
 }
 .cal-container .cal-header .cal-header-btn-group {
   display: flex;
-  gap: 1.5rem;
-  font-size: 2rem;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+}
+.cal-container .cal-header .cal-header-btn-group .fa {
+  display: flex;
+  color: #2b4865;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cal-container .cal-header .cal-header-btn-group .fa:hover {
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #256d85;
 }
 .cal-container .cal-header .cal-header-date {
   font-size: 2.5rem;
+  font-weight: 400;
+  color: #2b4865;
 }
 .cal-container .cal-header .goto-today {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.cal-container .cal-header .goto-today .goto {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: solid 1px #2b4865;
+}
+.cal-container .cal-header .goto-today .goto input {
+  position: relative;
+  width: 10rem;
+  height: 2.2rem;
+  left: 0.5rem;
+  outline: none;
+  border: none;
+}
+.cal-container .cal-header .goto-today .goto input::placeholder {
+  color: #2b4865;
+  opacity: 0.6;
+}
+.cal-container .cal-header .goto-today .goto button {
+  position: absolute;
+  right: 0;
+  height: 2.2rem;
+  width: 2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.cal-container .cal-header .goto-today .goto button:hover {
+  transition: all 0.5s;
+  color: #f8f8f8;
+  background-color: #256d85;
+}
+.cal-container .cal-header .goto-today .today-btn {
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  background-color: transparent;
+  color: #2b4865;
+  font-size: 1.8rem;
+}
+.cal-container .cal-header .goto-today .today-btn:hover {
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #256d85;
+  border-radius: 50px;
 }
 .cal-container table,
 .cal-container th,
@@ -90,6 +157,10 @@ body {
 .cal-container .month-grid tbody .grid-day-frame .grid-day-body {
   position: absolute;
   height: 80%;
+}
+.cal-container .month-grid tbody .today .grid-day-header {
+  color: #256d85;
+  font-size: 2rem;
 }
 .cal-container .month-grid tbody .prev-date,
 .cal-container .month-grid tbody .next-date {
